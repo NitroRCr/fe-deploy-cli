@@ -5,8 +5,17 @@
 
 将配置文件 `deploy.config.js` 重命名为 `deploy.config.cjs`。
 
-由于此项目使用 commonjs 格式，而配置文件后缀为 `js`，这会导致在默认使用 esm 格式的新项目中，无法以 esm 格式读取配置文件而报错。无其他更改。
+由于此项目使用 commonjs 格式，而配置文件后缀为 `js`，这会导致在默认使用 esm 格式的新项目中，无法以 esm 格式读取配置文件而报错。
 
+无其他更改。
+
+安装：
+
+```
+npm i -g n-deploy-cli
+```
+
+以下是原 README 内容:
 
 ## git地址：
 https://github.com/dadaiwei/fe-deploy-cli
