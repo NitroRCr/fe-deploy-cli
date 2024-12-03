@@ -1,6 +1,13 @@
 # fe-deploy-cli
 前端轻量化部署脚手架，支持测试、线上等多环境部署，支持环境配置扩展，配置好后仅需一条命令即可完成整个部署流程。
 
+## 相较原项目的更改
+
+将配置文件 `deploy.config.js` 重命名为 `deploy.config.cjs`。
+
+由于此项目使用 commonjs 格式，而配置文件后缀为 `js`，这会导致在默认使用 esm 格式的新项目中，无法以 esm 格式读取配置文件而报错。无其他更改。
+
+
 ## git地址：
 https://github.com/dadaiwei/fe-deploy-cli
 
@@ -37,7 +44,7 @@ deploy init
 ![初始化](./imgs/初始化.png)
 
 ### 2.配置部署环境
-部署配置文件位于deploy文件夹下的`deploy.config.js`,
+部署配置文件位于deploy文件夹下的`deploy.config.cjs`,
 一般包含`dev`（测试环境）和`prod`（线上环境）两个配置，再有多余的环境配置形式与之类似，只有一个环境的可以删除另一个多余的配置（比如只有`prod`线上环境，请删除`dev`测试环境配置）。
 
 具体配置信息请参考配置文件注释：
@@ -71,7 +78,7 @@ module.exports = {
 ```
 
 ### 3.查看部署命令
-配置好`deploy.config.js`，运行
+配置好`deploy.config.cjs`，运行
 ```
 deploy --help
 ```

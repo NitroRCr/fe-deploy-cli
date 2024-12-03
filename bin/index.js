@@ -5,7 +5,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const packageJson = require('../package.json');
 const deployPath = path.join(process.cwd(), './deploy');
-const deployConfigPath = `${deployPath}/deploy.config.js`;
+const deployConfigPath = `${deployPath}/deploy.config.cjs`;
 const { checkNodeVersion, checkDeployConfig, underlineLog } = require('../utils/index');
 
 const version = packageJson.version;
